@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171314" />
+    <meta name="description" content="Một góc nhỏ trong thế giới của mình." />
+    <title>Hồ sơ cá nhân</title>
+    <link rel="icon" href="data:," />
+    <link rel="preload" as="image" href="assets/images/portrait1.png" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="assets/fonts/exo-2-latin-wght-normal.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <div class="background-words" aria-hidden="true"></div>
+    <main aria-label="Hồ sơ cá nhân">
+      <figure class="portrait" aria-label="Profile portrait">
+        <div class="wave-layer" aria-hidden="true">
+          <span class="wave"></span>
+          <span class="wave"></span>
+          <span class="wave"></span>
+          <span class="wave"></span>
+        </div>
+        <div class="portrait-border" aria-hidden="true">
+          <span class="border-pulse"><span class="border-ring"></span></span>
+        </div>
+        <svg
+          class="liquid-layer"
+          viewBox="-200 -200 400 400"
+          aria-hidden="true"
+        >
+          <defs>
+            <filter
+              id="liquid-merge"
+              x="-40%"
+              y="-40%"
+              width="180%"
+              height="180%"
+              color-interpolation-filters="sRGB"
+            >
+              <feMorphology
+                in="SourceAlpha"
+                operator="dilate"
+                radius=".6"
+                result="edge"
+              />
+              <feFlood style="flood-color: var(--accent)" result="gold" />
+              <feComposite
+                in="gold"
+                in2="edge"
+                operator="in"
+                result="outline"
+              />
+              <feMerge>
+                <feMergeNode in="outline" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <g
+            class="liquid-contour"
+            filter="url(#liquid-merge)"
+            style="fill: var(--page)"
+          >
+            <g class="liquid-bridges"></g>
+            <circle class="liquid-core" r="0" />
+            <g class="liquid-drops"></g>
+          </g>
+        </svg>
+        <div class="satellite-system" id="orbit-satellites" inert></div>
+        <div class="portrait-core">
+          <div class="portrait-frame">
+            <img
+              class="portrait-image"
+              src="assets/images/portrait1.png"
+              width="1254"
+              height="1254"
+              alt="Ảnh chân dung"
+              fetchpriority="high"
+            />
+          </div>
+          <svg class="orbit-copy" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path
+                id="orbit-path"
+                d="M 100,25 a 75,75 0 1,1 0,150 a 75,75 0 1,1 0,-150"
+              />
+            </defs>
+            <text>
+              <textPath
+                href="#orbit-path"
+                textLength="471.24"
+                lengthAdjust="spacing"
+              >
+                Click For More · Click For More · Click For More ·
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <button
+          class="portrait-trigger"
+          type="button"
+          disabled
+          aria-label="Đang tải hồ sơ"
+          aria-expanded="false"
+          aria-controls="orbit-satellites"
+        ></button>
+      </figure>
+      <p id="startup-status" role="status" hidden></p>
+    </main>
+    <dialog
+      class="section-dialog"
+      aria-labelledby="popup-title"
+      aria-describedby="popup-description"
+    >
+      <div class="popup-surface">
+        <img class="popup-cover" src="assets/images/portrait1.png" alt="" />
+        <svg class="popup-loader" viewBox="0 0 100 100" aria-hidden="true">
+          <circle
+            class="popup-loader-progress"
+            cx="50"
+            cy="50"
+            r="48.5"
+            pathLength="1"
+          />
+        </svg>
+        <div class="popup-toolbar" inert>
+          <div class="popup-brand">
+            <span class="popup-status-dot" aria-hidden="true"></span
+            ><span
+              >PERSONAL
+              <span class="popup-brand-divider">/</span> PORTFOLIO</span
+            >
+          </div>
+          <button
+            class="popup-close"
+            type="button"
+            aria-label="Đóng mục"
+            title="Đóng (Esc)"
+          >
+            <img
+              src="assets/icons/close.svg"
+              width="19"
+              height="19"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+        <div class="popup-content" inert>
+          <p class="popup-kicker"></p>
+          <h1 class="popup-title" id="popup-title"></h1>
+          <p class="popup-description" id="popup-description"></p>
+          <div class="popup-detail"></div>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="gallery-lightbox" aria-label="Xem ảnh thư viện">
+      <div class="lightbox-toolbar">
+        <p class="lightbox-title"></p>
+        <button
+          type="button"
+          class="icon-button"
+          data-photo-close
+          aria-label="Đóng ảnh"
+        >
+          ×
+        </button>
+      </div>
+      <img class="lightbox-image" src="assets/images/gallery/01.jpg" alt="" />
+      <div class="lightbox-footer">
+        <button
+          type="button"
+          class="icon-button"
+          data-photo-step="-1"
+          aria-label="Ảnh trước"
+        >
+          ←</button
+        ><span class="lightbox-count"></span
+        ><button
+          type="button"
+          class="icon-button"
+          data-photo-step="1"
+          aria-label="Ảnh sau"
+        >
+          →
+        </button>
+      </div>
+    </dialog>
+    <script defer src="assets/js/orbit-label.js"></script>
+    <script defer src="assets/js/background.js"></script>
+    <script defer src="assets/js/liquid.js"></script>
+    <script defer src="assets/js/content.js"></script>
+    <script defer src="assets/js/config.js"></script>
+    <script defer src="assets/js/popup.js"></script>
+    <script defer src="assets/js/orbit.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </body>
+</html>

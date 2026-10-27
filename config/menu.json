@@ -1,0 +1,80 @@
+[
+  {
+    "id": "about",
+    "label": "Giới thiệu",
+    "title": "Giới thiệu",
+    "image": "assets/images/portrait1.png",
+    "imagePosition": "50% 35%",
+    "maskOpacity": 0.25,
+    "description": "Về sinh viên IT",
+    "action": {
+      "type": "popup",
+      "content": "content/about.html"
+    }
+  },
+  {
+    "id": "contact",
+    "label": "Liên hệ",
+    "title": "Trò chuyện đê",
+    "image": "assets/images/natural-contact.jpg",
+    "imagePosition": "center",
+    "maskOpacity": 0.3,
+    "description": "Mr.Peak liên hệ tôi",
+    "action": {
+      "type": "popup",
+      "content": "content/contact.html"
+    }
+  },
+  {
+    "id": "skills",
+    "label": "Kỹ năng",
+    "title": "Kỹ năng & tay nghề",
+    "image": "assets/images/natural-skills.jpg",
+    "imagePosition": "center",
+    "maskOpacity": 0.3,
+    "description": "Những công cụ làm nên tay nghề",
+    "action": {
+      "type": "popup",
+      "content": "content/skills.html"
+    }
+  },
+  {
+    "id": "gallery",
+    "label": "Thư viện",
+    "title": "Tình yêu bắt đầu năm 2019 (Barcalona vs Manchester United)",
+    "image": "assets/images/natural-gallery.jpg",
+    "imagePosition": "center",
+    "maskOpacity": 0.18,
+    "description": "Những khoảnh khắc đáng giữ lại",
+    "action": {
+      "type": "popup",
+      "content": "content/gallery.html"
+    }
+  },
+  {
+    "id": "projects",
+    "label": "Dự án",
+    "title": "Dự án tiêu biểu",
+    "image": "assets/images/natural-projects.jpg",
+    "imagePosition": "center",
+    "maskOpacity": 0.3,
+    "description": "Biến ý tưởng thành hiện thực",
+    "action": {
+      "type": "popup",
+      "content": "content/projects.html"
+    }
+  },
+  {
+    "id": "more",
+    "label": "Khám phá thêm",
+    "title": "Ngoài những dòng code",
+    "image": "assets/images/natural-more.jpg",
+    "imagePosition": "center",
+    "maskOpacity": 0.26,
+    "description": "Còn nhiều điều để khám phá",
+    "action": {
+      "type": "popup",
+      "content": "content/more.html"
+    }
+  }
+]

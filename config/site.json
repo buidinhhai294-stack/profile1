@@ -1,0 +1,48 @@
+{
+  "title": "Hồ sơ cá nhân",
+  "description": "Lập trình viên Full stack · Giao diện tinh tế, hệ thống đáng tin cậy.",
+  "name": "Personal",
+  "avatar": "assets/images/portrait1.png",
+  "avatarAlt": "Ảnh chân dung",
+  "callToAction": "Click For More",
+  "colors": {
+    "page": "#171314",
+    "surface": "#241c1d",
+    "ink": "#f2e8e1",
+    "muted": "#bdaaa3",
+    "accent": "#c77868",
+    "line": "#493232"
+  },
+  "animation": {
+    "orbitSeconds": 60,
+    "openingSeconds": 1,
+    "previewReturnMs": 1000,
+    "previewCrossfadeSeconds": 0.7,
+    "waveMs": 4000
+  },
+  "popup": {
+    "maxWidth": 1600,
+    "maxHeight": 1520
+  },
+  "backgroundWords": [
+    "HTML & CSS",
+    "JAVASCRIPT / TYPESCRIPT",
+    "REACT / NEXT.JS",
+    "VUE / NUXT",
+    "PHP / LARAVEL",
+    "NODE.JS / NESTJS",
+    "REST API / GRAPHQL",
+    "PYTHON / FASTAPI",
+    "MYSQL / POSTGRESQL",
+    "REDIS / MONGODB",
+    "DOCKER / LINUX",
+    "CI/CD / CLOUD",
+    "GIT & REVIEW CODE",
+    "TESTING / PHPUNIT / VITEST",
+    "TRIỂN KHAI UI / FIGMA",
+    "HIỆU NĂNG & TIẾP CẬN"
+  ],
+  "profile": {
+    "careerStartYear": 2009
+  }
+}
